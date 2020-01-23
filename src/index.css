@@ -11,3 +11,14 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.itemLine {
+  height: 25vh;
+}
+
+.itemLine img {
+  height: 20vh;
+  margin: 2.5vh;
+  padding: 2.5vh;
+
+}

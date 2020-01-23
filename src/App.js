@@ -1,26 +1,39 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react';
 import './App.css';
+import ItemsSection from './components/itemsSection.js';
+import TotalsSection from './components/totalsSection.js';
+// import poster from '../poster.jpg';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+class App extends Component {
+  constructor(props){
+    super(props);
+    //set the total Units sold, and create a temporary lineItem 
+    this.state = {
+      totalUnits: 0, 
+      lineItem: {
+        imgSrc: './images/poster.jpg', 
+        countIn: 12, 
+        add: 0,
+        comp: 0, 
+        countOut: 5,
+      }
+    }
+  }
+
+  render(){
+    console.log(this.state.lineItem);
+    return (
+      <div className="App">
+        {/* render line items */}
+          <  ItemsSection lineItem={this.state.lineItem}/>
+
+        {/* render total section */}
+          < TotalsSection />
+
+      </div>
+    );
+  }
 }
 
 export default App;
