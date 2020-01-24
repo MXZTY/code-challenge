@@ -1,0 +1,25 @@
+{ 
+    "items" : [
+        {
+            "id" : "Poster1",
+            "img" : "../images/poster.jpg", 
+            "price" : "10.00", 
+            "quantityAvailable": "-7",
+            "countIn" : "12",
+            "add" : "0",
+            "comp" : "0",
+            "countOut" : "5"  
+        },
+
+        {
+            "id" : "Poster2",
+            "img" : "../images/poster1.jpg", 
+            "price" : "10.00", 
+            "quantityAvailable": "5",
+            "countIn" : "6",
+            "add" : "0",
+            "comp" : "0",
+            "countOut" : "2"  
+        }
+    ]
+}

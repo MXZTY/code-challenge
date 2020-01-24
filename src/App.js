@@ -1,32 +1,28 @@
 import React, { Component } from 'react';
 import './App.css';
-import ItemsSection from './components/itemsSection.js';
+import ItemSection from './components/itemSection.js';
 import TotalsSection from './components/totalsSection.js';
+import items from './sampleItems.json';
 // import poster from '../poster.jpg';
 
 
 class App extends Component {
   constructor(props){
     super(props);
-    //set the total Units sold, and create a temporary lineItem 
+    //set the state items to the imported items from sampleItems.json
     this.state = {
-      totalUnits: 0, 
-      lineItem: {
-        imgSrc: './images/poster.jpg', 
-        countIn: 12, 
-        add: 0,
-        comp: 0, 
-        countOut: 5,
-      }
+      items: items
     }
   }
-
+  
   render(){
-    console.log(this.state.lineItem);
     return (
       <div className="App">
         {/* render line items */}
-          <  ItemsSection lineItem={this.state.lineItem}/>
+          {items.items.map((item) => {
+            console.log(item)
+            return < ItemSection key={item.id} item={item} />
+          })}
 
         {/* render total section */}
           < TotalsSection />
